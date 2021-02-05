@@ -1,0 +1,51 @@
+NAME: Nevin Liang
+EMAIL: nliang868@g.ucla.edu
+ID: 705575353
+
+FILE DESCRIPTION
+=================
+
+lab1b-client.c:     a program that opens a connection to the server through a --port command.
+                    includes two other flags such as --log which takes in a log file as a
+                    parameter and logs every output post-compression and every input pre-
+                    decompression. also accepts --compress which uses zlib to compress data
+                    sent between client and server.
+
+lab1b-server.c:     a program that will connect with the client, receive client's commands, and
+                    relay them to a shell for processing before returning the results back to the
+                    client. has a --port command which opens the server on that port for listening
+                    as well as a --compress command which decompresses input and compresses output
+                    using zlib
+
+Makefile:           the project's Makefile. supports 5 targets including 1 default
+                    make default: builds the code. requires lab1b-client.c and lab1b-server.c
+                                    to exist.
+                    make client: builds lab1b-client.c and requires lab1b-client.c to exist
+                    make server: builds lab1b-server.c and requires lab1b-server.c to exist
+                    make dist: creates the tarball file that includes all necessary
+                                files to submit.
+                    make clean: cleans the code of all files created by the make
+                                file such as tarball, lab1b executables, etc.
+
+SOURCES USED
+=============
+Man Pages:
+    https://man7.org/linux/man-pages/man2/read.2.html
+    https://man7.org/linux/man-pages/man3/termios.3.html
+    https://man7.org/linux/man-pages/man3/getopt.3.html
+    https://man7.org/linux/man-pages/man2/pipe.2.html
+    https://man7.org/linux/man-pages/man2/fork.2.html
+    https://man7.org/linux/man-pages/man3/exec.3.html
+    https://man7.org/linux/man-pages/man2/poll.2.html
+    https://man7.org/linux/man-pages/man2/write.2.html
+    https://man7.org/linux/man-pages/man7/socket.7.html
+    https://www.zlib.net/manual.html
+    https://www.zlib.net/zlib_how.html
+
+Tutorials:
+    http://www.cs.rpi.edu/~moorthy/Courses/os98/Pgms/socket.html
+        - equivalent page found on webarchive
+    TA SLIDES from 1B, 1C, and 1E
+
+Code Taken:
+    A massive part of proj1a
